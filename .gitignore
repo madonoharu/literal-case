@@ -1,3 +1,6 @@
+cjs
+esm
+
 # Logs
 logs
 *.log
