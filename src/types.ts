@@ -150,16 +150,26 @@ type PascalCaseImpl<S extends string> = string extends S
   ? `${Capitalize<Lowercase<W>>}${PascalCaseImpl<R>}`
   : Capitalize<Lowercase<S>>;
 
-export type PascalCase<S extends string> = PascalCaseImpl<
-  JoinNumbers<NoCase<S>>
->;
+export type PascalCase<S extends string> = {
+  __rec: PascalCaseImpl<JoinNumbers<NoCase<S>>>;
+}["__rec"];
 
-export type CamelCase<S extends string> = Uncapitalize<PascalCase<S>>;
+export type CamelCase<S extends string> = {
+  __rec: Uncapitalize<PascalCase<S>>;
+}["__rec"];
 
-export type SnakeCase<S extends string> = Lowercase<NoCase<S, "_">>;
+export type SnakeCase<S extends string> = {
+  __rec: Lowercase<NoCase<S, "_">>;
+}["__rec"];
 
-export type KebabCase<S extends string> = Lowercase<NoCase<S, "-">>;
+export type ConstantCase<S extends string> = {
+  __rec: Uppercase<NoCase<S, "_">>;
+}["__rec"];
 
-export type ConstantCase<S extends string> = Uppercase<NoCase<S, "_">>;
+export type KebabCase<S extends string> = {
+  __rec: Lowercase<NoCase<S, "-">>;
+}["__rec"];
 
-export type DotCase<S extends string> = Lowercase<NoCase<S, ".">>;
+export type DotCase<S extends string> = {
+  __rec: Lowercase<NoCase<S, ".">>;
+}["__rec"];

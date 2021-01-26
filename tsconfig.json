@@ -11,5 +11,5 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": ["src", "test"],
-  "exclude": ["node_modules", "**/dist", "**/lib", "**/esm"]
+  "exclude": ["node_modules", "**/cjs", "**/esm"]
 }
