@@ -134,9 +134,9 @@ type NoCaseImpl<
   ? { __rec: NoCaseImpl<U, D, [...R, T[0]]> }
   : { __rec: R };
 
-export type NoCase<S extends string, D extends string = " "> = JoinChars<
-  Unwrap<NoCaseImpl<Chars<Format<S, D>>, D>>
->;
+export type NoCase<S extends string, D extends string = " "> = string extends S
+  ? string
+  : JoinChars<Unwrap<NoCaseImpl<Chars<Format<S, D>>, D>>>;
 
 type JoinNumbers<S extends string> = S extends `${infer W} ${infer R}`
   ? R extends `${number}${string}`
@@ -144,9 +144,7 @@ type JoinNumbers<S extends string> = S extends `${infer W} ${infer R}`
     : `${W} ${JoinNumbers<R>}`
   : S;
 
-type PascalCaseImpl<S extends string> = string extends S
-  ? string
-  : S extends `${infer W} ${infer R}`
+type PascalCaseImpl<S extends string> = S extends `${infer W} ${infer R}`
   ? `${Capitalize<Lowercase<W>>}${PascalCaseImpl<R>}`
   : Capitalize<Lowercase<S>>;
 
