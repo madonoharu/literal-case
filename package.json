@@ -5,6 +5,12 @@
   "license": "MIT",
   "author": "まどの <madonoharu@gmail.com>",
   "main": "index.js",
+  "files": [
+    "cjs",
+    "esm",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "build": "yarn build:cjs & yarn build:esm",
     "build:cjs": "tsc -p ./tsconfig.build.json -m commonjs --outDir cjs",
