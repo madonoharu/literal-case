@@ -20,7 +20,8 @@
     "cjs",
     "esm",
     "package.json",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "yarn build:cjs & yarn build:esm",
