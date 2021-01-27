@@ -92,13 +92,6 @@ type Result = CamelCase<"foo bar">;
 type Result = PascalCase<"foo bar">;
 ```
 
-### `PascalCase<T>`
-
-```ts
-// Expect: "FooBar"
-type Result = PascalCase<"foo bar">;
-```
-
 ### `SnakeCase<T>`
 
 ```ts
