@@ -1,5 +1,7 @@
 # literal-case
 
+[![npm version](https://badge.fury.io/js/literal-case.svg)](https://badge.fury.io/js/literal-case)
+
 A TypeScript library for word case conversions, using Template Literal Types(TS >= 4.1).
 
 ## Installation
