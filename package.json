@@ -1,10 +1,21 @@
 {
   "name": "literal-case",
   "version": "1.0.0",
+  "description": "A TypeScript library for word case conversions, using Template Literal Types(TS >= 4.1).",
+  "keywords": [
+    "typescript",
+    "template literal type",
+    "typesafe",
+    "camel-case",
+    "pascal-case",
+    "snake-case",
+    "constant-case"
+  ],
   "repository": "https://github.com/MadonoHaru/literal-case.git",
   "license": "MIT",
   "author": "まどの <madonoharu@gmail.com>",
-  "main": "index.js",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
   "files": [
     "cjs",
     "esm",
