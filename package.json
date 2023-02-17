@@ -27,7 +27,9 @@
     "build": "yarn build:cjs & yarn build:esm",
     "build:cjs": "tsc -p ./tsconfig.build.json -m commonjs --outDir cjs",
     "build:esm": "tsc -p ./tsconfig.build.json -m esnext --outDir esm",
-    "test": "jest"
+    "test": "jest",
+    "check:eslint": "eslint .",
+    "check:prettier": "prettier --check ."
   },
   "husky": {
     "hooks": {

@@ -17,6 +17,5 @@
   },
   "rules": {
     "no-console": "off"
-  },
-  "ignorePatterns": ["**/esm/*", "**/cjs/*"]
+  }
 }
